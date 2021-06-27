@@ -45,7 +45,8 @@
         android:text="Service Name"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewServiceItemDesc"
@@ -63,17 +64,20 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="156dp"
+        app:backgroundTint="#339E38"
         app:icon="@drawable/ic_baseline_edit_24"
         app:iconGravity="top"
         app:layout_constraintBottom_toBottomOf="@+id/viewServiceItem"
         app:layout_constraintStart_toEndOf="@+id/imageViewServiceItem"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894" />
+        app:layout_constraintVertical_bias="0.894"
+        android:layout_marginLeft="156dp" />
 
     <Button
         android:id="@+id/buttonDeleteServiceItem"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        app:backgroundTint="#C52727"
         app:icon="@drawable/ic_baseline_delete_24"
         app:iconGravity="top"
         app:layout_constraintBottom_toBottomOf="@+id/viewServiceItem"

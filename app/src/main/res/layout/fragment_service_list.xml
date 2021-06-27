@@ -93,7 +93,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -102,7 +102,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="All"
-                    android:textSize="12sp" />
+                    android:textSize="8sp" />
 
                 <Button
                     android:id="@+id/buttonBasicItemsList"
@@ -110,7 +110,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Basic Items"
-                    android:textSize="12sp" />
+                    android:textSize="8sp" />
 
                 <Button
                     android:id="@+id/buttonDryCleanList"
@@ -118,7 +118,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Dry Clean"
-                    android:textSize="12sp" />
+                    android:textSize="8sp" />
 
                 <Button
                     android:id="@+id/buttonSpecialItems"
@@ -126,7 +126,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Special Items"
-                    android:textSize="12sp" />
+                    android:textSize="8sp" />
             </LinearLayout>
 
             <ListView

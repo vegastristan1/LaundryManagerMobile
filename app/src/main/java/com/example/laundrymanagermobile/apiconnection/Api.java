@@ -29,7 +29,7 @@ public class Api {
     public static final String URL_READ_SERVICE = ROOT_URL + "getallservices";
     public static final String URL_READ_SERVICE_TO_ID = ROOT_URL + "getservicestoid";
     public static final String URL_READ_SERVICE_All_INFO = ROOT_URL + "getallinfoservices";
-    public static final String URL_UPDATE_SERVICE = ROOT_URL + "updateservice";
-    public static final String URL_DELETE_SERVICE = ROOT_URL + "deleteservice&id=";
+    public static final String URL_UPDATE_SERVICE_TO_ID = ROOT_URL + "updateservicetoid";
+    public static final String URL_DELETE_SERVICE_TO_ID = ROOT_URL + "deleteservicetoid&id=";
     public static final String URL_POPULATE_SPINNER_CATEGORIES = ROOT_URL + "populatespinnercategories";
 }
