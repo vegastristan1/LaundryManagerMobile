@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">LaundryManagerMobile</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_profit">Profit</string>
+    <string name="title_service_lists">Service Lists</string>
+    <string name="title_book">Book\'s</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_store_name">Not a valid store name</string>
+    <string name="invalid_owner_name">Not a valid owner name</string>
+    <string name="invalid_contact_number">Not a valid contact number</string>
+    <string name="invalid_address">Not a valid address</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_register">Register</string>
+    <string name="store_name">Store Name</string>
+    <string name="registration_failed">"Registration failed"</string>
+
+    <array name="teams">
+        <item>Avengers</item>
+        <item>Justice League</item>
+        <item>X-Men</item>
+        <item>Fantastic Four</item>
+    </array>
+    <array name="items">
+        <item>Avengers</item>
+        <item>Justice League</item>
+        <item>X-Men</item>
+        <item>Fantastic Four</item>
+    </array>
+    <array name="categories">
+        <item>Avengers</item>
+        <item>Justice League</item>
+        <item>X-Men</item>
+        <item>Fantastic Four</item>
+    </array>
+</resources>

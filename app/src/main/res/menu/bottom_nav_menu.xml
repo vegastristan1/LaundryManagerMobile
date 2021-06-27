@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_books"
+        android:icon="@drawable/ic_baseline_book_online_24"
+        android:title="@string/title_book" />
+
+    <item
+        android:id="@+id/navigation_servicelist"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/title_service_lists" />
+
+    <item
+        android:id="@+id/navigation_profit"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="@string/title_profit" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/title_profile" />
+
+</menu>

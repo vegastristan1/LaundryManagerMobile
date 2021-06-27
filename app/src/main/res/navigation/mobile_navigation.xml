@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_books">
+
+    <fragment
+        android:id="@+id/navigation_books"
+        android:name="com.example.laundrymanagermobile.ui.books.BooksFragment"
+        android:label="@string/title_book"
+        tools:layout="@layout/fragment_books" />
+
+    <fragment
+        android:id="@+id/navigation_servicelist"
+        android:name="com.example.laundrymanagermobile.ui.services.ServiceFragment"
+        android:label="@string/title_service_lists"
+        tools:layout="@layout/fragment_service_list" />
+
+    <fragment
+        android:id="@+id/navigation_profit"
+        android:name="com.example.laundrymanagermobile.ui.profits.ProfitsFragment"
+        android:label="@string/title_profit"
+        tools:layout="@layout/fragment_profits" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.laundrymanagermobile.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profits" />
+</navigation>
