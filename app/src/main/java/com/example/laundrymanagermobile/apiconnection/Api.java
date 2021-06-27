@@ -25,7 +25,7 @@ public class Api {
     public static final String URL_DELETE_STORE_MANAGER = ROOT_URL + "deleteastoremanager&id=";
 
     //Services Data
-    public static final String URL_CREATE_SERVICE = ROOT_URL + "createservice";
+    public static final String URL_CREATE_SERVICE_TO_ID = ROOT_URL + "createservicetoid";
     public static final String URL_READ_SERVICE = ROOT_URL + "getallservices";
     public static final String URL_READ_SERVICE_TO_ID = ROOT_URL + "getservicestoid";
     public static final String URL_READ_SERVICE_All_INFO = ROOT_URL + "getallinfoservices";

@@ -41,9 +41,9 @@ public class ServiceFragment extends Fragment {
     private static final int CODE_GET_REQUEST = 1024;
     private static final int CODE_POST_REQUEST = 1025;
 
-    TextView textViewName, textViewId;
-    EditText editTextItemNameType, editTextCategoryNameType, editTextServiceName, editTextServicePrice, editTextServiceDesc, editTextStoreID;
-    int store_id;
+    TextView textViewManagerName, textViewManagerId, dialog_close_add;
+    EditText editTextServiceId, editTextItemId, editTextCategoryId, editTextServiceName, editTextServicePrice, editTextServiceDesc, editTextStoreID;
+    int store_id, service_id;
     FloatingActionButton floatingActionButton;
     ProgressBar progressBar;
     ListView listView;
@@ -61,22 +61,25 @@ public class ServiceFragment extends Fragment {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.add_service);
 
+        editTextServiceId = dialog.findViewById(R.id.editTextAddServiceId);
         editTextServiceName = dialog.findViewById(R.id.editTextAddServiceName);
         editTextServicePrice = dialog.findViewById(R.id.editTextAddServicePrice);
         editTextServiceDesc = dialog.findViewById(R.id.editTextAddServiceDesc);
-        spinnerItem = dialog.findViewById(R.id.spinnerItems);
-        spinnerCategories = dialog.findViewById(R.id.spinnerCategories);
-
-        textViewId = view.findViewById(R.id.textViewId);
-        textViewName = view.findViewById(R.id.textViewNameOfStore);
+        editTextItemId = dialog.findViewById(R.id.editTextAddServiceItemId);
+        spinnerItem = dialog.findViewById(R.id.spinnerAddServiceItems);
+        editTextCategoryId = dialog.findViewById(R.id.editTextAddServiceCategoryId);
+        spinnerCategories = dialog.findViewById(R.id.spinnerAddServiceCategories);
+        dialog_close_add = dialog.findViewById(R.id.textViewDialogCloseButton);
+        textViewManagerId = view.findViewById(R.id.textViewId);
+        textViewManagerName = view.findViewById(R.id.textViewNameOfStore);
         floatingActionButton = view.findViewById(R.id.fab2);
 
         //getting the current user
         Manager manager = SharedPrefManager.getInstance(getContext()).getUser();
 
         //setting the values to the textviews
-        textViewId.setText(String.valueOf(manager.getId()));
-        textViewName.setText(manager.getStore_name());
+        textViewManagerId.setText(String.valueOf(manager.getId()));
+        textViewManagerName.setText(manager.getStore_name());
 
         /*productListViewModel = new ViewModelProvider(this).get(ProductListViewModel.class);
 
@@ -94,7 +97,7 @@ public class ServiceFragment extends Fragment {
         return root;*/
 
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
-        listView = (ListView) view.findViewById(R.id.listOfProductItem);
+        listView = (ListView) view.findViewById(R.id.listOfServiceItem);
 
         serviceList = new ArrayList<>();
 
@@ -105,7 +108,14 @@ public class ServiceFragment extends Fragment {
             }
         });
 
-        store_id = Integer.parseInt(textViewId.getText().toString());
+        dialog_close_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        store_id = Integer.parseInt(textViewManagerId.getText().toString());
         readServiceFromID(store_id);
 
         //readServices();
@@ -152,8 +162,10 @@ public class ServiceFragment extends Fragment {
         params.put("services_desc", servicedesc);
         params.put("store_id", String.valueOf(store_id));
 
-        com.example.laundrymanagermobile.ui.services.ServiceFragment.PerformNetworkRequest request = new com.example.laundrymanagermobile.ui.services.ServiceFragment.PerformNetworkRequest(Api.URL_CREATE_SERVICE, params, CODE_POST_REQUEST);
+        com.example.laundrymanagermobile.ui.services.ServiceFragment.PerformNetworkRequest request = new com.example.laundrymanagermobile.ui.services.ServiceFragment.PerformNetworkRequest(Api.URL_CREATE_SERVICE_TO_ID, params, CODE_POST_REQUEST);
         request.execute();
+
+        dialog.cancel();
     }
 
     private void readServiceFromID(int storeId) {

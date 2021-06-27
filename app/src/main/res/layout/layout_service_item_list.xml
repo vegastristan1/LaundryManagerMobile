@@ -15,48 +15,47 @@
         android:id="@+id/imageViewServiceItem"
         android:layout_width="121dp"
         android:layout_height="114dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewServiceItem"
-        app:layout_constraintEnd_toEndOf="@+id/viewServiceItem"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="@+id/viewServiceItem"
-        app:layout_constraintTop_toTopOf="@+id/viewServiceItem"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_143_1" />
 
     <TextView
         android:id="@+id/textViewServiceItemCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="59dp"
+        android:layout_height="29dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="12dp"
         android:text="Cost : "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/viewServiceItem"
         app:layout_constraintEnd_toStartOf="@+id/buttonEditServiceItem"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewServiceItem"
-        app:layout_constraintTop_toBottomOf="@+id/textViewServiceItemDesc"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewServiceItem" />
 
     <TextView
         android:id="@+id/textViewServiceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
         android:text="Service Name"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/viewServiceItem"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toEndOf="@+id/imageViewServiceItem"
-        app:layout_constraintTop_toTopOf="@+id/viewServiceItem" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/textViewServiceItemDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Service Item Description"
         app:layout_constraintEnd_toEndOf="@+id/viewServiceItem"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/imageViewServiceItem"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/viewServiceItem"
         app:layout_constraintTop_toBottomOf="@+id/textViewServiceName" />
 
     <Button

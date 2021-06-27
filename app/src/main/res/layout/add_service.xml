@@ -11,13 +11,26 @@
         android:id="@+id/mockView"
         android:layout_width="132dp"
         android:layout_height="135dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="43dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAddServiceDesc"
+        app:layout_constraintEnd_toStartOf="@+id/editTextAddServiceName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view2"
+    <EditText
+        android:id="@+id/editTextAddServiceId"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextAddServiceName"
@@ -37,16 +50,16 @@
         android:id="@+id/editTextAddServicePrice"
         android:layout_width="176dp"
         android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Service Price"
-        android:inputType="textPersonName"
+        android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAddServiceName"
-        android:layout_marginLeft="12dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddServiceName" />
 
     <EditText
         android:id="@+id/editTextAddServiceDesc"
@@ -61,8 +74,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAddServicePrice" />
 
+    <EditText
+        android:id="@+id/editTextAddServiceItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="350dp"
+        android:layout_marginRight="350dp"
+        android:layout_marginBottom="450dp"
+        android:ems="10"
+        android:inputType="text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
-        android:id="@+id/spinnerItems"
+        android:id="@+id/spinnerAddServiceItems"
         android:layout_width="298dp"
         android:layout_height="27dp"
         android:layout_marginTop="12dp"
@@ -72,8 +100,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAddServiceDesc" />
 
+    <EditText
+        android:id="@+id/editTextAddServiceCategoryId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="350dp"
+        android:layout_marginRight="350dp"
+        android:layout_marginBottom="450dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
-        android:id="@+id/spinnerCategories"
+        android:id="@+id/spinnerAddServiceCategories"
         android:layout_width="298dp"
         android:layout_height="27dp"
         android:layout_marginTop="16dp"
@@ -81,7 +124,7 @@
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerItems" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAddServiceItems" />
 
     <Button
         android:id="@+id/buttonAddService"
@@ -93,11 +136,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerItems"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAddServiceItems"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textViewCloseButton"
+        android:id="@+id/textViewDialogCloseButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/circlebutton"
@@ -108,18 +151,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="6dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161"
-        tools:srcCompat="@drawable/_1_ek3" />
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

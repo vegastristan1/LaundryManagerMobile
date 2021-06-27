@@ -8,6 +8,7 @@
     <string name="title_book">Book\'s</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_registration">RegistrationActivity</string>
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
@@ -30,16 +31,14 @@
         <item>X-Men</item>
         <item>Fantastic Four</item>
     </array>
-    <array name="items">
-        <item>Avengers</item>
-        <item>Justice League</item>
-        <item>X-Men</item>
-        <item>Fantastic Four</item>
-    </array>
     <array name="categories">
-        <item>Avengers</item>
-        <item>Justice League</item>
-        <item>X-Men</item>
-        <item>Fantastic Four</item>
+        <item>Basic Items</item>
+        <item>Special Items</item>
+        <item>Dry Cleaning</item>
+    </array>
+    <array name="items">
+        <item>Machine Wash</item>
+        <item>Hand Wash</item>
+        <item>Press/Iron</item>
     </array>
 </resources>
